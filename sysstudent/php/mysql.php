@@ -1,25 +1,24 @@
 <?php
     function connectMySql($host,$user,$password){
-        $link = mysql_connect($host, $user, $password);
-        var_dump($link);
+        $link = mysqli_connect("localhost:3306", "root", "root", "sysstudent");
         if (!$link) {
-            echo 'error code:'.mysql_errorno()."\n";
-            echo 'error msg:'.mysql_error()."\n";
+            echo "error code:".mysqli_connect_errno()."<br/>";
+            echo "error msg:".mysqli_connect_error()."<br/>";
             exit;
         }
-        echo 'connected successfully';
+        echo "connected successfully"."<br/>";
         return $link;
     }
 
     function closeMySql($obj){
-        mysql_close($obj);
+        mysqli_close($obj);
     }
 
-    function mysqlExecute($sql){
-        $result = mysql_query($sql);
+    function mysqlExecute($linkObj,$sql){
+        $result = mysqli_query($linkObj,$sql);
         if (!$result) {
-            echo 'error code:'.mysql_errorno()."\n";
-            echo 'error msg:'.mysql_error()."\n";
+            echo "error code:".mysqli_connect_errno()."<br/>";
+            echo "error msg:".mysqli_connect_error()."<br/>";
             exit;
         }
         return $result;
