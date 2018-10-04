@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body bgcolor="skyblue">
+    <h1 align="center">个人用户信息登记</h1>
+    <h5>&nbsp;</h5>
+    <hr align="center" color="#FF0000" size="5" width="90%"/>
+    <h3>&nbsp;</h3>
+    <form action = "./php/register.php" method="post">
+        <table align="center">
+                <tr>
+                    <td align="right">
+                        用户名：
+                    </td>
+                    <td align="left">
+                        <input type="text" name="user" required="required" />
+                    </td>
+                </tr>
+                <tr>
+                     <td align="right">
+                       密 码：
+                    </td>
+                    <td align="left">
+                        <input type="password" name="password" required="required" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        确认密码：
+                    </td>
+                    <td align="left">
+                       <input type="password" name="pass_comfirm" required="required" />
+                    </td>        
+                </tr>
+                <tr>
+                    <td align="right">
+                        出生日期：
+                    </td>
+                    <td align="left">
+                       <input type="text" name="birth_date" value="1990-10-06" placeholder="1990-10-06"/>
+                    </td>
+                </tr>   
+                <tr>
+                    <td align="right">
+                       家庭住址：
+                    </td>
+                    <td align="left">
+                       <input type="text" name="home_addr"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                         <input type="submit" name="commit" value="注册"/>
+                    </td>        
+                </tr>
+            </table>        
+    </form>
+</body>
+</html>

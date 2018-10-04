@@ -1,0 +1,22 @@
+
+--创建数据库
+create database if not exists userinfo charset utf8;
+
+--创建用户信息表
+create table if not exists user(
+    id int auto_increment primary key,
+    username varchar(32),
+    password char(32),
+    birthdate date,
+    homeaddr varchar(255),
+    ctime timestamp
+) engine=InnoDB default charset=utf8;
+
+--将username字段修改不允许为空
+alter table user modify username varchar(32) not null;
+
+--将password字段修改不允许为空
+alter table user modify password char(32) not null;
+
+--将username字段设置为唯一性
+alter table user modify username varchar(32) not null unique;

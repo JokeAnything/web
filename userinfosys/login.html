@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body bgcolor="skyblue">
+    <h1 align="center">欢迎进入用户信息系统</h1>
+    <h5>&nbsp;</h5>
+    <hr align="center" color="#FF0000" size="5" width="90%"/>
+    <h3>&nbsp;</h3>
+    <form action = "./php/login.php" method="post">
+        <table align="center">
+                <tr>
+                    <td align="right">
+                        用户名：
+                    </td>
+                    <td align="left">
+                        <input type="text" name="user" required="required" />
+                    </td>
+                </tr>
+                <tr>
+                     <td align="right">
+                       密 码：
+                    </td>
+                    <td align="left">
+                        <input type="password" name="password" required="required" />
+                    </td>        
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        <a href="./register.html"><b><font color="#0000FF">注册</font></b></a>
+                        <input type="submit" name="commit" value="登录" />
+                    </td>        
+                </tr>
+            </table>        
+    </form>
+</body>
+</html>

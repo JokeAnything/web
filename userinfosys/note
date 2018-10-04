@@ -1,0 +1,10 @@
+                        <table>
+                            <tr>
+                                <td align="left">
+                                   <a href="./register.html" target="_blank"><b><font color="#0000FF">注册</font></b></a>
+                                </td>
+                                <td align="right">
+                                   <input type="submit" name="commit" value="登录" />
+                                </td>            
+                            </tr>
+                        </table>
