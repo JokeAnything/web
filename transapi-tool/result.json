@@ -1,0 +1,37 @@
+{
+    "query":"love",
+    "errorCode":"0",
+    "basic":{
+        "us-phonetic":"lʌv",
+        "phonetic":"lʌv",
+        "uk-phonetic":"lʌv",
+        "wfs":[
+            {
+                "wf":{
+                    "name":"过去式",
+                    "value":"loved"
+                }
+            },
+            {
+                "wf":{
+                    "name":"过去分词",
+                    "value":"loved"
+                }
+            },
+            {
+                "wf":{
+                    "name":"现在分词",
+                    "value":"loving"
+                }
+            }
+        ],
+        "explains":[
+            "n. 恋爱；亲爱的；酷爱；喜爱的事物",
+            "vt. 喜欢；热爱；爱慕",
+            "vi. 爱",
+            "n. (Love)人名；(英)洛夫"
+        ]
+    }
+}
+
+{"query":"love","errorCode":"0","basic":{"us-phonetic":"lʌv","phonetic":"lʌv","uk-phonetic":"lʌv","wfs":[{"wf":{"name":"过去式","value":"loved"}},{"wf":{"name":"过去分词","value":"loved"}},{"wf":{"name":"现在分词","value":"loving"}}],"explains":["n. 恋爱；亲爱的；酷爱；喜爱的事物","vt. 喜欢；热爱；爱慕","vi. 爱","n. (Love)人名；(英)洛夫"]}}
