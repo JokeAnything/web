@@ -11,14 +11,23 @@
     // define data source type,from realtime netapi.
     const SRC_DATA_TYPE_NETAPI = 1;
 
-    $queryInput = $argv[1];
-    echo $queryInput;
+    if(!isset($_REQUEST["query"])){
+        setLastError(ERR_QUERY_INVALID_CODE);
+        echo_last_error();
+        exit(1);
+    }
+
+    $queryInput = $_REQUEST["query"];
+    
     // get data from DB.
     if( $queryInput === ''){
         setLastError(ERR_QUERY_INVALID_CODE);
         echo_last_error();
         exit(1);
     }
+
+    $queryInput=strtolower($queryInput);
+    
     $dbObj = initDataBase();
     if($dbObj){
         $query = base64_encode($queryInput);
@@ -34,7 +43,7 @@
                 $lastRes['phonetic']=base64_decode($result['phonetic']);
             }
             if($result['uk_phonetic']!==""){
-                $lastRes['uk_phonetic']=base64_decode($result['uk_phonetic']);
+                $lastRes['ukphonetic']=base64_decode($result['uk_phonetic']);
             }
             if($result['wfs']!==""){
                 $lastRes['wfs']=json_decode(base64_decode($result['wfs']),true);
@@ -76,7 +85,7 @@
                         $lastRes_api['phonetic'] = $api_data['basic']['phonetic'];
                     }
                     if(isset($api_data['basic']['uk-phonetic'])){
-                        $lastRes_api['uk-phonetic'] = $api_data['basic']['uk-phonetic'];
+                        $lastRes_api['uk_phonetic'] = $api_data['basic']['uk-phonetic'];
                     }
                     if(isset($api_data['basic']['wfs'])){
                         $lastRes_api['wfs'] = $api_data['basic']['wfs'];
