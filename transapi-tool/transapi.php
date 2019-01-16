@@ -2,7 +2,7 @@
 
     header("Content-Type: text/html;charset=utf-8");
     include_once "transapi_error.php";
-    include_once "getDataFromDb.php";
+    include_once "get_data_from_db.php";
     include_once "getDataFromNet.php";
     
     // define data source type,from database cache.
@@ -31,7 +31,8 @@
     $dbObj = initDataBase();
     if($dbObj){
         $query = base64_encode($queryInput);
-        $result = getKeywordInfoFromDB($dbObj,$query);
+        $data_src = SRC_API_KINGSOFT;
+        $result = getKeywordInfoFromDB($dbObj,$query,$data_src);
         if($result){
             if($result['query']!==""){
                 $lastRes['query']=base64_decode($result['query']);
